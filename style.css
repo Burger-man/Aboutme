@@ -1,0 +1,167 @@
+/* Fonts for the website */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+/* Default styling for all pages */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+}
+
+header {
+  padding: 20px;
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+nav {
+  font-size: 20px;
+  transform: translateY(-100%);
+  animation: drop-down 1s ease-in-out forwards;
+}
+
+@keyframes drop-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 35px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: drop-down-title 1s ease-in-out forwards;
+}
+
+@keyframes drop-down-title {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+h2, p{
+    opacity: 0;
+    animation: fade-in-text 1.5s ease-in-out forwards;
+}
+
+#about p, #skills p {
+  width: 45vw;
+}
+
+@keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#title {
+  margin-top: 15vh;
+  text-align: center;
+  font-size: 55px;
+}
+
+/* Styling for the contact section */
+#contact {
+    padding: 50px;
+  }
+  
+  #contact h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  
+  #contact ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #contact li {
+    margin-right: 10px;
+  }
+  
+  #contact li:last-child {
+    margin-right: 0;
+  }
+  
+  #contact a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact a:hover {
+    background-color: #888;
+  }
+
+@media only screen and (max-width: 480px) {
+    #about p, #skills p {
+        width: 80vw;
+    }
+
+  nav {
+    font-size: 12px;
+  }
+}
